@@ -20,16 +20,16 @@
   Once you have opened the application, feel free to click around and discover all it has to offer. The Login/Signup button are in the top right hand corner, alongside the Book Search and Saved Books buttons. These will take you to the repsective pages. 
 
   The Login page: 
-  ![Alt text](server/assets/Screenshot%202023-07-11%20at%2011.42.34%20PM.png)
+  ![Alt text](server/assets/login.png)
 
   The Signup page:
-  ![Alt text](server/assets/Screenshot%202023-07-11%20at%2011.42.45%20PM.png)
+  ![Alt text](server/assets/signup.png)
 
   The Search bar: 
-  ![Alt text](server/assets/Screenshot%202023-07-11%20at%2011.42.14%20PM.png)
+  ![Alt text](server/assets/searchBar.png)
 
   Example of books showing in the Search page:
-  ![Alt text](server/assets/Screenshot%202023-07-11%20at%2011.43.52%20PM.png)
+  ![Alt text](server/assets/pageLoadExample.png)
 
   ## License
   This project has a MIT License license. For details about its restrictions and rules, please follow the link below:  

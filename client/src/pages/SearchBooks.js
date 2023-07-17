@@ -4,7 +4,7 @@ import { Container, Col, Form, Button, Card, Row } from "react-bootstrap";
 import Auth from "../utils/auth";
 import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
 
-// Added
+// Importing mutations
 import { useMutation } from "@apollo/client";
 import { SAVE_BOOK } from "../utils/mutations";
 
@@ -35,16 +35,19 @@ const SearchBooks = () => {
     }
 
     try {
+      // Fetch the data from the google apis
       const response = await fetch(
         `https://www.googleapis.com/books/v1/volumes?q=${searchInput}`
       );
 
+      // Check the response
       if (!response.ok) {
         throw new Error("something went wrong!");
       }
 
       const { items } = await response.json();
 
+      // Map the book data we get back 
       const bookData = items.map((book) => ({
         bookId: book.id,
         authors: book.volumeInfo.authors || ["No author to display"],
@@ -77,11 +80,6 @@ const SearchBooks = () => {
       const { data } = await saveBook({
         variables: { input: { ...bookToSave } },
       });
-      console.log(data);
-
-      // if (!saveBook.ok) {
-      //   throw new Error('something went wrong!');
-      // }
 
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);

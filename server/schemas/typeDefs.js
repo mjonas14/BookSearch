@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-express');
 
+// Define all the metrics we want to track
 const typeDefs = gql`
   type User {
     _id: ID
